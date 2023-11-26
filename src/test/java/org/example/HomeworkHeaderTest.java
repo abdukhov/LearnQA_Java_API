@@ -21,6 +21,5 @@ public class HomeworkHeaderTest {
                 .header("content-length", containsString("15"))
                 .header("server", containsString("Apache"))
                 .header("cache-control", containsString("max-age=0"));
-
     }
 }
