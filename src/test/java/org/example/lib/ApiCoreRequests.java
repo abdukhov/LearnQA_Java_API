@@ -51,8 +51,8 @@ public class ApiCoreRequests {
 
     @Step("Register a new user")
     public Response registerUser(String url, Map<String, String> userData) {
-        return RestAssured
-                .given()
+        return given()
+                .filter(new AllureRestAssured())
                 .body(userData)
                 .post(url)
                 .andReturn();
